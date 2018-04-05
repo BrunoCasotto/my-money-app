@@ -16,6 +16,7 @@
       <!-- content of pages -->
       <md-app-content>
         <content-wrapper></content-wrapper>
+        <span>{{ activePage }}</span>
       </md-app-content>
       <!-- content of pages (end) -->
     </md-app>
@@ -23,9 +24,10 @@
 </template>
 
 <script>
-import HeaderTemplate from '_components/Header.vue';
-import Navigation from '_components/Navigation.vue';
-import ContentWrapper from '_components/ContentWrapper.vue';
+import HeaderTemplate from '_components/Header.vue'
+import Navigation from '_components/Navigation.vue'
+import ContentWrapper from '_components/ContentWrapper.vue'
+import store from '_vuex/store'
 
 export default {
   name: 'App',
@@ -33,6 +35,12 @@ export default {
     HeaderTemplate,
     Navigation,
     ContentWrapper
+  },
+  data: {
+    activePage: store.getters.getActivePage
+  },
+  mounted: function () {
+   console.log(`vuex`, this.activePage)
   }
 }
 </script>
