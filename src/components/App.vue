@@ -15,8 +15,7 @@
 
       <!-- content of pages -->
       <md-app-content>
-        <content-wrapper></content-wrapper>
-        <span>{{ activePage }}</span>
+        <content-wrapper :page="activePage" ></content-wrapper>
       </md-app-content>
       <!-- content of pages (end) -->
     </md-app>

@@ -1,12 +1,17 @@
 <template>
-  <div>  Here call the pages
-</div>
+  <div>Need call the {{page}} page</div>
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+    name: 'ContentWrapper',
+    props: {
+      page: {
+        type: String,
+        default: ''
+      }
+    }
+  }
 </script>
 
 <style>
