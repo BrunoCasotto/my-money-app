@@ -14,7 +14,7 @@ export default {
   name: 'Header',
   methods: {
     toggleMenu() {
-      store.setters.toggleMenu()
+      store.dispatch('toggleMenu')
     }
   }
 }

@@ -1,22 +1,22 @@
 let state = {
-  status: true
+  status: false
 }
 
 let mutations = {
-  togglemenu (state, data) {
+  toggleMenu (state, data) {
     state.status = !state.status
   }
 }
 
 let actions = {
-  togglemenu (context) {
-    context.commit('togglemenu')
+  toggleMenu (context) {
+    context.commit('toggleMenu')
   }
 }
 
 let getters = {
   getMenuStatus() {
-    return state.activePage
+    return state.status
   }
 }
 
