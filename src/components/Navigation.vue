@@ -1,10 +1,25 @@
 <template>
-  <md-tabs class="md-primary" md-alignment="centered">
-    <md-tab id="tab-home" md-label="DashBoard"></md-tab>
-    <md-tab id="tab-pages" md-label="Caixa"></md-tab>
-    <md-tab id="tab-posts" md-label="Métricas"></md-tab>
-    <md-tab id="tab-favorites" md-label="Configurações"></md-tab>
-  </md-tabs>
+  <md-list>
+    <md-list-item>
+      <md-icon>move_to_inbox</md-icon>
+      <span class="md-list-item-text">Inbox</span>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon>send</md-icon>
+      <span class="md-list-item-text">Sent Mail</span>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon>delete</md-icon>
+      <span class="md-list-item-text">Trash</span>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon>error</md-icon>
+      <span class="md-list-item-text">Spam</span>
+    </md-list-item>
+  </md-list>
 </template>
 
 <script>

@@ -1,16 +1,16 @@
 <template>
   <div class="page-container">
-    <md-app>
+    <md-app md-mode="reveal">
       <!-- header -->
-      <md-app-toolbar>
-        <div class="md-toolbar-row">
-          <header-template></header-template>
-        </div>
-
-        <div class="md-toolbar-row">
-          <navigation></navigation>
-        </div>
+      <md-app-toolbar class="md-primary">
+        <header-template></header-template>
       </md-app-toolbar>
+      <md-app-drawer :md-active.sync="menuVisible">
+        <md-toolbar class="md-transparent" md-elevation="0">
+          Navigation
+        </md-toolbar>
+        <navigation></navigation>
+      </md-app-drawer>
       <!-- header (end) -->
 
       <!-- content of pages -->
@@ -38,8 +38,10 @@ export default {
   data: {
     activePage: store.getters.getActivePage
   },
-  mounted: function () {
-   console.log(`vuex`, this.activePage)
+  computed: {
+    menuVisible () {
+      return store.state.Menu.status
+    }
   }
 }
 </script>
@@ -49,6 +51,10 @@ export default {
 .md-theme-default {
   *, *:after, *:before {
       box-sizing: border-box;
+  }
+
+  .page-container {
+    height: 100%;
   }
 
 }
