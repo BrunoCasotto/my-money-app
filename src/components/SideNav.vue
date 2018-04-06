@@ -8,7 +8,7 @@
 
 <script>
 import MaterializeJs from 'materialize-css'
-import store from '_vuex/store'
+import store         from '_vuex/store'
 
 export default {
   name: 'SideNav',
