@@ -1,30 +1,28 @@
 <template>
-  <md-list>
-    <md-list-item>
-      <md-icon>move_to_inbox</md-icon>
-      <span class="md-list-item-text">Inbox</span>
-    </md-list-item>
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-    <md-list-item>
-      <md-icon>send</md-icon>
-      <span class="md-list-item-text">Sent Mail</span>
-    </md-list-item>
-
-    <md-list-item>
-      <md-icon>delete</md-icon>
-      <span class="md-list-item-text">Trash</span>
-    </md-list-item>
-
-    <md-list-item>
-      <md-icon>error</md-icon>
-      <span class="md-list-item-text">Spam</span>
-    </md-list-item>
-  </md-list>
+      <ul class="right hide-on-med-and-down">
+        <li v-for="item in menuItems" v-bind:key="item">
+          <a href="sass.html">{{item}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
+import store from '_vuex/store'
+
 export default {
-  name: 'Navigation'
+  name: 'Navigation',
+  data() {
+    return {
+      menuItems: store.getters.getMenuItems
+    }
+  }
 }
 </script>
 

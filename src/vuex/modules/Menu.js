@@ -1,22 +1,18 @@
 let state = {
-  status: false
+  items: [
+    "Home",
+    "Caixa",
+    "Estatisticas"
+  ]
 }
 
-let mutations = {
-  toggleMenu (state, data) {
-    state.status = !state.status
-  }
-}
+let mutations = {}
 
-let actions = {
-  toggleMenu (context) {
-    context.commit('toggleMenu')
-  }
-}
+let actions = {}
 
 let getters = {
-  getMenuStatus() {
-    return state.status
+  getMenuItems() {
+    return state.items
   }
 }
 

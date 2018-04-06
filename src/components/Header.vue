@@ -1,9 +1,6 @@
 <template>
   <div class="header">
-    <md-button class="md-icon-button" @click="toggleMenu">
-      <md-icon>menu</md-icon>
-    </md-button>
-    <span class="md-title">My Title</span>
+    Header
   </div>
 </template>
 

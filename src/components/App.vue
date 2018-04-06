@@ -1,47 +1,34 @@
 <template>
-  <div class="page-container">
-    <md-app md-mode="reveal">
-      <!-- header -->
-      <md-app-toolbar class="md-primary">
-        <header-template></header-template>
-      </md-app-toolbar>
-      <md-app-drawer :md-active.sync="menuVisible">
-        <md-toolbar class="md-transparent" md-elevation="0">
-          Navigation
-        </md-toolbar>
-        <navigation></navigation>
-      </md-app-drawer>
-      <!-- header (end) -->
+  <div class="main">
+    <div class="main__navigation">
+      <navigation></navigation>
+    </div>
 
-      <!-- content of pages -->
-      <md-app-content>
-        <content-wrapper :page="activePage" ></content-wrapper>
-      </md-app-content>
-      <!-- content of pages (end) -->
-    </md-app>
+    <div class="main__menu">
+      <side-nav></side-nav>
+    </div>
+
+    <div class="container row main__content">
+      <content-wrapper :page="activePage"></content-wrapper>
+    </div>
   </div>
 </template>
 
 <script>
-import HeaderTemplate from '_components/Header.vue'
-import Navigation from '_components/Navigation.vue'
+import Navigation     from '_components/Navigation.vue'
 import ContentWrapper from '_components/ContentWrapper.vue'
-import store from '_vuex/store'
+import SideNav        from '_components/SideNav.vue'
+import store          from '_vuex/store'
 
 export default {
   name: 'App',
   components: {
-    HeaderTemplate,
     Navigation,
-    ContentWrapper
+    ContentWrapper,
+    SideNav
   },
   data: {
     activePage: store.getters.getActivePage
-  },
-  computed: {
-    menuVisible () {
-      return store.state.Menu.status
-    }
   }
 }
 </script>
