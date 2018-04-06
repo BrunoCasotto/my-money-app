@@ -31,8 +31,8 @@ export default {
     Navigation,
     SideNav
   },
-  data: {
-    activePage: store.getters.getActivePage
+  props: {
+    activePage: ''
   }
 }
 </script>

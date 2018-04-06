@@ -13,7 +13,8 @@ module.exports = {
     alias:{
       _components: path.join(base_path, 'components'),
       _services: path.join(base_path, 'services'),
-      _vuex: path.join(base_path, 'vuex')
+      _vuex: path.join(base_path, 'vuex'),
+      'vue$': path.join(__dirname, 'node_modules', 'vue/dist/vue.common.js')
     }
   },
   module: {
