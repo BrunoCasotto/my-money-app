@@ -5,7 +5,7 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
-        <li v-for="item in menuItems" v-bind:key="item">
+        <li v-for="item in menuItems" v-bind:key="item.title">
           <a :href="item.link">{{item.title}}</a>
         </li>
       </ul>

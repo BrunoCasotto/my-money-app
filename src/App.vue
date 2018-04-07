@@ -18,7 +18,7 @@
 
 <script>
 import Navigation     from '_components/Navigation.vue'
-import ContentWrapper from '_components/ContentWrapper.vue'
+import ContentWrapper from '_wrappers/ContentWrapper.vue'
 import ActionButton   from '_components/ActionButton.vue'
 import SideNav        from '_components/SideNav.vue'
 import store          from '_vuex/store'

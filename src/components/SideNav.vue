@@ -1,6 +1,6 @@
 <template>
   <ul class="sidenav" id="mobile-demo">
-    <li v-for="item in menuItems" v-bind:key="item">
+    <li v-for="item in menuItems" v-bind:key="item.title">
       <a :href="item.link">{{item.title}}</a>
     </li>
   </ul>

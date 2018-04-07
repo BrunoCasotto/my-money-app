@@ -1,8 +1,8 @@
 let state = {
   items: [
-    {title: "Home", link: "home"},
-    {title: "Caixa", link: "caixa"},
-    {title: "Estatisticas", link: "estatisticas"}
+    {title: "Home", link: "/"},
+    {title: "Caixa", link: "/#/caixa"},
+    {title: "Estatisticas", link: "/#/estatisticas"}
   ]
 }
 
