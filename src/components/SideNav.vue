@@ -1,7 +1,7 @@
 <template>
   <ul class="sidenav" id="mobile-demo">
     <li v-for="item in menuItems" v-bind:key="item">
-      <a href="sass.html">{{item}}</a>
+      <a :href="item.link">{{item.title}}</a>
     </li>
   </ul>
 </template>

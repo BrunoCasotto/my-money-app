@@ -6,7 +6,7 @@
 
       <ul class="right hide-on-med-and-down">
         <li v-for="item in menuItems" v-bind:key="item">
-          <a href="sass.html">{{item}}</a>
+          <a :href="item.link">{{item.title}}</a>
         </li>
       </ul>
     </div>
