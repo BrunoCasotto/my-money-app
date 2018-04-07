@@ -1,6 +1,6 @@
 <template>
   <div class="fixed-action-btn">
-    <a class="btn-floating btn-large blue darken-1">
+    <a :class="`btn-floating btn-large blue darken-1 ${effect}`">
       <i class="large material-icons">create</i>
     </a>
     <ul>
@@ -19,6 +19,9 @@ import MaterializeJs from 'materialize-css'
 
 export default {
   name: 'ActionButton',
+  props: {
+    effect: ''
+  },
   mounted() {
     var elem = document.querySelector('.fixed-action-btn')
     if(elem) {

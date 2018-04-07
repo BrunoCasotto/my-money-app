@@ -12,7 +12,7 @@
       <content-wrapper :page="activePage"></content-wrapper>
     </div>
 
-    <action-button></action-button>
+    <action-button effect=""></action-button>
   </div>
 </template>
 
