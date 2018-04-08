@@ -1,14 +1,20 @@
 <template>
-  <ul class="collapsible">
-    <template v-for="cash in cashList">
-      <collapse :key="cash.title" :data="cash" ></collapse>
-    </template>
-  </ul>
+  <div class="cash-flow-wrapper">
+    <date-picker title="Data inicio"></date-picker>
+    <date-picker title="Data fim"></date-picker>
+
+    <ul class="collapsible">
+      <template v-for="cash in cashList">
+        <collapse :key="cash.title" :data="cash" ></collapse>
+      </template>
+    </ul>
+  </div>
 </template>
 
 <script>
 import MaterializeJs from 'materialize-css'
 import Collapse      from '_components/Collapse.vue'
+import DatePicker    from '_components/DatePicker.vue'
 
 export default {
   name: "CashFlowWrapper",
@@ -43,10 +49,14 @@ export default {
     }
   },
   components: {
-    Collapse
+    Collapse,
+    DatePicker
   }
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
+.cash-flow-wrapper {
+  padding-top: 10px;
+}
 </style>

@@ -5,15 +5,25 @@
         {{collapseIcon}}
       </i>
       <span class="cash-item__title">{{data.title}}</span>
-      <span class="cash-item__value">{{data.value}}</span>
+      <span class="cash-item__value">{{data.value | currency}}</span>
     </div>
-    <div class="collapsible-body">
+    <div class="collapsible-body cash-item__body">
       <p>{{data.description}}</p>
+      <div class="cash-item__body__controller">
+        <a class="btn-floating disabled">
+          <i class="material-icons yellow darken-1">edit</i>
+        </a>
+        <a class="btn-floating disabled">
+          <i class="material-icons red darken-1">delete</i>
+        </a>
+      </div>
     </div>
   </li>
 </template>
 
 <script>
+import utils from '_src/utils.js'
+
 export default {
   name: "Collapse",
   props:{
@@ -34,6 +44,9 @@ export default {
     collapseIcon() {
       return this.data.type === 'input' ? 'call_made' : 'call_received'
     }
+  },
+  filters: {
+    currency: utils.setCurrency
   }
 }
 </script>

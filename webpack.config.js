@@ -11,6 +11,7 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     alias:{
+      _src        : base_path,
       _components : path.join(base_path, 'components'),
       _pages      : path.join(base_path, 'pages'),
       _wrappers   : path.join(base_path, 'wrappers'),
