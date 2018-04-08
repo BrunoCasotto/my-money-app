@@ -23,9 +23,9 @@ export default {
     effect: ''
   },
   mounted() {
-    var elem = document.querySelector('.fixed-action-btn')
+    let elem = document.querySelector('.fixed-action-btn')
     if(elem) {
-      var instance = MaterializeJs.FloatingActionButton.init(elem, {
+      let instance = MaterializeJs.FloatingActionButton.init(elem, {
         direction: "left"
       })
     }

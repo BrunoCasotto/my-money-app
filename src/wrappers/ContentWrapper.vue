@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Home from '_pages/Home.vue'
-import CashFlow from '_pages/CashFlow.vue'
+import Home       from '_pages/Home.vue'
+import CashFlow   from '_pages/CashFlow.vue'
 import Statistics from '_pages/Statistics.vue'
 
   export default {
