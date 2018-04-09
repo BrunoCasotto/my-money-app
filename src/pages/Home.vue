@@ -1,12 +1,17 @@
 <template>
   <div class="home">
-    home
+    <cash-flow-wrapper></cash-flow-wrapper>
   </div>
 </template>
 
 <script>
+import CashFlowWrapper from '_wrappers/CashFlowWrapper.vue'
+
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    CashFlowWrapper
+  }
 }
 </script>
 
