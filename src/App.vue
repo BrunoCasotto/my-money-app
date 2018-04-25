@@ -22,6 +22,7 @@ import ContentWrapper from '_wrappers/ContentWrapper.vue'
 import ActionButton   from '_components/ActionButton.vue'
 import SideNav        from '_components/SideNav.vue'
 import store          from '_vuex/store'
+import BillingService from '_services/billing.js'
 
 export default {
   name: 'App',
@@ -33,6 +34,9 @@ export default {
   },
   props: {
     activePage: ''
+  },
+  mounted() {
+    let billing = new BillingService();
   }
 }
 </script>
