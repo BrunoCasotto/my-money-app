@@ -9,14 +9,6 @@
     </div>
     <div class="collapsible-body cash-item__body">
       <p>{{data.description}}</p>
-      <div class="cash-item__body__controller">
-        <a class="btn-floating disabled">
-          <i class="material-icons yellow darken-1">edit</i>
-        </a>
-        <a class="btn-floating disabled">
-          <i class="material-icons red darken-1">delete</i>
-        </a>
-      </div>
     </div>
   </li>
 </template>
