@@ -5,7 +5,9 @@
     </a>
     <ul>
       <li>
-        <a class="btn-floating green darken-1"><i class="material-icons">create</i></a>
+        <a class="btn-floating green darken-1 modal-trigger" href="#modal1">
+          <i class="material-icons">create</i>
+        </a>
       </li>
       <li>
         <a class="btn-floating yellow darken-1"><i class="material-icons">record_voice_over</i></a>

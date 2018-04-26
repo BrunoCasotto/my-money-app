@@ -8,6 +8,8 @@
         <collapse :key="cash.title" :data="cash" ></collapse>
       </template>
     </ul>
+
+    <insert-modal></insert-modal>
   </div>
 </template>
 
@@ -15,6 +17,7 @@
 import MaterializeJs from 'materialize-css'
 import Collapse      from '_components/Collapse.vue'
 import DatePicker    from '_components/DatePicker.vue'
+import InsertModal    from '_components/InsertModal.vue'
 
 export default {
   name: "CashFlowWrapper",
@@ -50,7 +53,8 @@ export default {
   },
   components: {
     Collapse,
-    DatePicker
+    DatePicker,
+    InsertModal
   }
 }
 </script>
