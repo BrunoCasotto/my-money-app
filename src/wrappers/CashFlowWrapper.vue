@@ -10,6 +10,7 @@
     </ul>
 
     <insert-modal></insert-modal>
+    <insert-voice-modal></insert-voice-modal>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import MaterializeJs from 'materialize-css'
 import Collapse      from '_components/Collapse.vue'
 import DatePicker    from '_components/DatePicker.vue'
 import InsertModal    from '_components/InsertModal.vue'
+import InsertVoiceModal    from '_components/InsertVoiceModal.vue'
 
 export default {
   name: "CashFlowWrapper",
@@ -54,7 +56,8 @@ export default {
   components: {
     Collapse,
     DatePicker,
-    InsertModal
+    InsertModal,
+    InsertVoiceModal
   }
 }
 </script>

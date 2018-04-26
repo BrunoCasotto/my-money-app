@@ -1,12 +1,9 @@
 <template>
   <div class="insert-modal">
-    <div id="modal1" class="modal">
+    <div id="modal-insert" class="modal">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <h5 class="modal-content__title">Transação</h5>
+        <input-form></input-form>
       </div>
     </div>
   </div>
@@ -14,17 +11,29 @@
 
 <script>
 import MaterializeJs from 'materialize-css'
+import InputForm from '_components/InputForm.vue'
 
 export default {
-mounted() {
-  let elem = document.querySelector('#modal1');
-  let instance = MaterializeJs.Modal.init(elem, {});
-}
+  mounted() {
+    let elem = document.querySelector('#modal-insert');
+    let instance = MaterializeJs.Modal.init(elem, {});
+  },
+  components: {
+    InputForm
+  }
 }
 </script>
 
 <style lang="css" scoped>
 .btn-floating {
   opacity: 1;
+}
+.modal .modal-content {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.modal-content__title {
+  margin-top: 0;
 }
 </style>
