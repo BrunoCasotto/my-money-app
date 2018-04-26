@@ -1,7 +1,7 @@
 <template>
   <div class="cash-flow-wrapper">
-    <date-picker title="Data inicio"></date-picker>
-    <date-picker title="Data fim"></date-picker>
+    <!-- <date-picker title="Data inicio"></date-picker>
+    <date-picker title="Data fim"></date-picker> -->
 
     <ul class="collapsible">
       <template v-for="cash in cashList">
