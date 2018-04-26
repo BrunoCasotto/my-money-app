@@ -16,10 +16,10 @@
 import MaterializeJs from 'materialize-css'
 
 export default {
-mounted() {
-  let elem = document.querySelector('#modal-voice');
-  let instance = MaterializeJs.Modal.init(elem, {});
-}
+  mounted() {
+    let elem = document.querySelector('#modal-voice');
+    let instance = MaterializeJs.Modal.init(elem, {});
+  }
 }
 </script>
 
